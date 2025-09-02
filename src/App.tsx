@@ -1,6 +1,6 @@
 import AboutDetail from "./pages/AboutDetail"
 import Hero from "./components/Hero"
-import MainAbout from "./pages/MainAbout"
+import Home from "./pages/Home"
 import Navbar from "./components/Navbar"
 import Contact from "./pages/Contact"
 import PortfolioPage from "./pages/PortfolioPage"
@@ -13,7 +13,7 @@ function App() {
       {/* <Welcome /> */}
       <Navbar />
       <Hero />
-      <MainAbout />
+      <Home />
       <AboutDetail />
       <PortfolioPage />
       <Contact />

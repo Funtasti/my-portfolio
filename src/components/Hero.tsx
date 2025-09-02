@@ -11,7 +11,7 @@ interface SocialLink {
 
 export default function Hero()  {
   const socialLinks: SocialLink[] = [
-    { icon: Github, href: '#', label: 'GitHub' },
+    { icon: Github, href: 'https://github.com/Funtasti', label: 'GitHub' },
     { icon: Linkedin, href: '#', label: 'LinkedIn' },
     { icon: Instagram, href: '#', label: 'Instagram' }
   ]

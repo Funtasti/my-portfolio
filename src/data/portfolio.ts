@@ -22,8 +22,8 @@ export const projects: Project[] = [
     description:
       'Example example example example example example example example example. Example example example',
     cover: track,
-    demoUrl: '#',
-    repoUrl: '#',
+    demoUrl: 'https://github.com/Funtasti',
+    repoUrl: 'https://github.com/Funtasti',
     tech: ['React', 'TypeScript', 'Tailwind CSS'],
     stats: [
       { label: 'Total Technology', value: '9' },
@@ -44,7 +44,7 @@ export const projects: Project[] = [
       'Example example example example example example example example example example example. Example example example example example, example, example example example example. Example example example example example example example.',
     cover: portfolio,
     demoUrl: '#',
-    repoUrl: '#',
+    repoUrl: 'https://github.com/Funtasti',
     tech: ['React', 'Framer Motion', 'Vite'],
     stats: [
       { label: 'Total Technology', value: '9' },
@@ -65,8 +65,8 @@ export const projects: Project[] = [
     description:
       'Example example example example example, example, example example example example. Example example example example.',
     cover: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1200&auto=format&fit=crop',
-    demoUrl: '#',
-    repoUrl: '#',
+    demoUrl: 'https://github.com/Funtasti',
+    repoUrl: 'https://github.com/Funtasti',
     tech: ['React', 'TypeScript', 'Tailwind CSS'],
     stats: [
       { label: 'Total Technology', value: '7' },

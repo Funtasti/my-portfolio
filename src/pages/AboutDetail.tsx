@@ -45,7 +45,7 @@ export default function AboutDetail() {
   }
 
   return (
-    <section id="portfolio" className="min-h-[calc(100vh-70px)] py-16 md:py-20 bg-gradient-to-br from-[rgba(24,24,24,0.8)] to-[rgba(11,11,11,0.9)]">
+    <section id="about" className="min-h-[calc(100vh-70px)] py-16 md:py-20 bg-gradient-to-br from-[rgba(24,24,24,0.8)] to-[rgba(11,11,11,0.9)]">
       <div className="max-w-[1200px] mx-auto px-5">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
           <motion.div
