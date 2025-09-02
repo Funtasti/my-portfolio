@@ -4,6 +4,7 @@ import { Code, Award, Calendar, type LucideIcon } from 'lucide-react' //Trophy,
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import { smoothScrollTo } from '../utils/smoothScroll'
 import StatsCard from '../components/StatusCard'
+import resumePdf from '../assets/Sumit_Kumar_Naik_Resume.pdf'
 
 interface Stat {
   icon: LucideIcon
@@ -18,7 +19,7 @@ export default function AboutDetail() {
   const stats: Stat[] = [
     { icon: Code, count: 3, label: 'TOTAL PROJECTS' },
     { icon: Award, count: 5, label: 'CERTIFICATES' },
-    { icon: Calendar, count: 1, label: 'YEARS OF EXPERIENCE' },
+    { icon: Calendar, count: 0.8, label: 'YEARS OF EXPERIENCE' },
     // { icon: Trophy, count: 3, label: 'ACHIEVEMENTS' }
   ]
 
@@ -74,7 +75,7 @@ export default function AboutDetail() {
 
               <div className="flex flex-col md:flex-row gap-4 md:gap-8 items-start md:items-center">
                 <motion.a
-                  href="#"
+                  href={resumePdf}
                   className="btn-gradient text-white px-8 py-3 rounded-lg font-semibold inline-block"
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.95 }}
