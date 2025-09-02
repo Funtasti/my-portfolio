@@ -18,43 +18,48 @@ export const projects: Project[] = [
   {
     id: 'track-your-health',
     title: 'Track Your Health',
-    excerpt: 'Example example example example example example example example',
+    excerpt: 'Full-stack exercise-logging app with role-based auth for trainers and trainees.',
     description:
-      'Example example example example example example example example example. Example example example',
+      'Built a full-stack exercise-logging application with a Spring Boot backend and a React front end. Implements role-based authentication (trainers & trainees), secure session management, PostgreSQL relational modeling, RESTful CRUD endpoints, and a dynamic dashboard with charts and tables to visualize exercise progress.',
     cover: track,
     demoUrl: 'https://github.com/Funtasti',
     repoUrl: 'https://github.com/Funtasti',
-    tech: ['React', 'TypeScript', 'Tailwind CSS'],
+    tech: ['React', 'TypeScript', 'Tailwind CSS', 'Spring Boot', 'Java', 'PostgreSQL', 'JWT'],
     stats: [
-      { label: 'Total Technology', value: '9' },
-      { label: 'Star', value: '12' },
+      { label: 'Total Technology', value: '7' },
+      { label: 'Features', value: '6' },
     ],
     features: [
-      'Example',
-      'Example',
-      'Example',
+      'Full-stack exercise logging (React + Spring Boot)',
+      'Role-based authentication: Trainer & Trainee',
+      'Secure login and session management (JWT)',
+      'PostgreSQL relational data modeling',
+      'RESTful CRUD endpoints for tasks and users',
+      'Dynamic dashboard with charts and tables for progress visualization'
     ],
   },
   {
     id: 'personal-portfolio',
     title: 'Personal Portfolio',
     excerpt:
-      'Example example example example example example example example example.',
+      'Modern responsive portfolio built with React, TypeScript, Vite, and Tailwind — polished with Framer Motion.',
     description:
-      'Example example example example example example example example example example example. Example example example example example, example, example example example example. Example example example example example example example.',
+      'Personal portfolio for Sumit Kumar Naik showcasing projects, certifications, and technical skills. Built with React + TypeScript on Vite, styled with Tailwind CSS, and animated using Framer Motion. Includes a responsive layout, dark theme, smooth section navigation, an accessible contact form, custom hooks for scroll-based interactions, and a tech-stack gallery for quick skill visibility.',
     cover: portfolio,
     demoUrl: '#',
-    repoUrl: 'https://github.com/Funtasti',
-    tech: ['React', 'Framer Motion', 'Vite'],
+    repoUrl: 'https://github.com/Funtasti/my-portfolio',
+    tech: ['React','TypeScript', 'Vite', 'Tailwind CSS', 'Framer Motion', 'Lucide Icons'],
     stats: [
-      { label: 'Total Technology', value: '9' },
-      { label: 'Star', value: '17' },
+      { label: 'Total Technology', value: '6' },
+      { label: 'Features', value: '8' },
     ],
     features: [
-      'Example',
-      'Example',
-      'Example',
-      'Example',
+      'Responsive design that looks great on all devices',
+      'Animated UI with Framer Motion (includes custom hooks for scroll-based behavior)',
+      'Projects, certificates & tech-stack showcase',
+      'Accessible, animated contact form',
+      'Smooth section navigation with active highlighting',
+      'Dark theme with clean, modern aesthetic'
     ],
   },
   {
@@ -69,8 +74,8 @@ export const projects: Project[] = [
     repoUrl: 'https://github.com/Funtasti',
     tech: ['React', 'TypeScript', 'Tailwind CSS'],
     stats: [
-      { label: 'Total Technology', value: '7' },
-      { label: 'Star', value: '9' },
+      { label: 'Total Technology', value: '3' },
+      { label: 'Features', value: '3' },
     ],
     features: ['Example', 'Example', 'Example'],
   },

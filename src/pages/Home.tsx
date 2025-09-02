@@ -14,7 +14,7 @@ export default function Home() {
   const [ref, isVisible] = useScrollAnimation(0.2)
   const socialLinks: SocialLink[] = [
     { icon: Github, href: 'https://github.com/Funtasti', label: 'GitHub' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/sumit-kumar-naik', label: 'LinkedIn' },
     { icon: Instagram, href: '#', label: 'Instagram' }
   ]
   const containerVariants: Variants = {

@@ -12,7 +12,7 @@ interface SocialLink {
 export default function Hero()  {
   const socialLinks: SocialLink[] = [
     { icon: Github, href: 'https://github.com/Funtasti', label: 'GitHub' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/sumit-kumar-naik', label: 'LinkedIn' },
     { icon: Instagram, href: '#', label: 'Instagram' }
   ]
 

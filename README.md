@@ -1,69 +1,124 @@
-# React + TypeScript + Vite
+# Sumit Kumar Naik — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive developer portfolio built with **React**, **TypeScript**, **Vite**, and **Tailwind CSS**. Showcasing projects, certifications, and technical skills with smooth animations and a clean, accessible design.
 
-Currently, two official plugins are available:
+![Portfolio Screenshot](src/assets/portfolio.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Responsive Design:** Looks great on all devices.
+- **Animated UI:** Powered by [Framer Motion](https://www.framer.com/motion/) for smooth transitions.
+- **Project & Certificate Showcase:** Highlight your work and achievements.
+- **Tech Stack Gallery:** Display your technical skills visually.
+- **Contact Form:** Animated, accessible contact form.
+- **Section Navigation:** Smooth scroll and active section highlighting.
+- **Custom Hooks:** For scroll-based animations and navigation.
+- **Dark Theme:** Modern, dark-themed UI.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🚀 Demo
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+**Live Demo:** [link](https://my-portfolio-sumit.vercel.app/)  
+Or run locally (see below).
+
+---
+
+## 🛠️ Tech Stack
+
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [Lucide Icons](https://lucide.dev/)
+- [React Router](https://reactrouter.com/)
+
+---
+
+## 📦 Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v18+ recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+
+### Installation
+
+```sh
+git clone https://github.com/Funtasti/my-portfolio.git
+cd my-portfolio
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```sh
+npm run dev
 ```
+
+Open [http://localhost:5173](http://localhost:5173) to view in your browser.
+
+### Production Build
+
+```sh
+npm run build
+```
+
+### Linting
+
+```sh
+npm run lint
+```
+
+---
+
+## 🗂️ Project Structure
+
+```
+my-portfolio/
+├── public/              # Static assets
+├── src/
+│   ├── assets/          # Images, icons, resume
+│   ├── components/      # Reusable UI components (Navbar, Hero, StatusCard, etc.)
+│   ├── data/            # Portfolio/project/certificate data
+│   ├── hooks/           # Custom React hooks
+│   ├── pages/           # Main page sections (Home, About, Portfolio, Contact, etc.)
+│   ├── utils/           # Utility functions (smooth scroll, etc.)
+│   └── App.tsx          # Main app component
+├── index.html
+├── package.json
+└── ...
+```
+
+---
+
+## ✍️ Customization
+
+- **Projects/Certificates:**  
+  Edit [`src/data/portfolio.ts`](src/data/portfolio.ts) to add your own projects, certificates, and tech stack.
+
+- **Profile Info:**  
+  Update content in [`src/pages/AboutDetail.tsx`](src/pages/AboutDetail.tsx) and [`src/components/Hero.tsx`](src/components/Hero.tsx).
+
+- **Images/Resume:**  
+  Place your images and resume in [`src/assets/`](src/assets/).
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+## 🙋‍♂️ Author
+
+**Sumit Kumar Naik**  
+[GitHub](https://github.com/Funtasti) | [LinkedIn](https://www.linkedin.com/in/sumit-kumar-naik)
+
+---
+
+> _Built with passion and code. Feel
