@@ -121,4 +121,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-> _Built with passion and code. Feel
+> _Built with passion and code. Feel free to fork, use, and contribute!_
