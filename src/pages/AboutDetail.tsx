@@ -19,7 +19,7 @@ export default function AboutDetail() {
   const stats: Stat[] = [
     { icon: Code, count: 3, label: 'TOTAL PROJECTS' },
     { icon: Award, count: 5, label: 'CERTIFICATES' },
-    { icon: Calendar, count: 0.8, label: 'YEARS OF EXPERIENCE' },
+    { icon: Calendar, count: 1, label: 'YEARS OF EXPERIENCE' },
     // { icon: Trophy, count: 3, label: 'ACHIEVEMENTS' }
   ]
 

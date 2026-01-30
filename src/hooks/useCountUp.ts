@@ -1,12 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 
-/**
- * Counts from 0 up to `target` using an ease-out animation.
- * @param target final numeric value to count up to
- * @param duration animation duration in milliseconds (default 2000)
- * @param isVisible whether the animation should run (default false)
- * @returns current animated count (integer)
- */
 export function useCountUp(
   target: number,
   duration = 2000,
@@ -17,10 +10,8 @@ export function useCountUp(
   const startRef = useRef<number | null>(null);
 
   useEffect(() => {
-    // guard invalid inputs
     if (!isVisible || typeof window === "undefined") return;
 
-    // reset any previous animation
     if (rafRef.current != null) {
       cancelAnimationFrame(rafRef.current);
       rafRef.current = null;
@@ -35,7 +26,6 @@ export function useCountUp(
       const elapsed = time - startRef.current;
       const progress = Math.min(elapsed / Math.max(duration, 1), 1);
 
-      // easeOutQuart
       const eased = 1 - Math.pow(1 - progress, 4);
       const current = Math.floor(startValue + (finalTarget - startValue) * eased);
 
@@ -44,7 +34,6 @@ export function useCountUp(
       if (progress < 1) {
         rafRef.current = requestAnimationFrame(animate);
       } else {
-        // ensure exact final value
         setCount(finalTarget);
         rafRef.current = null;
       }

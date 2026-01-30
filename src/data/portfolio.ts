@@ -22,7 +22,7 @@ export const projects: Project[] = [
     description:
       'Built a full-stack exercise-logging application with a Spring Boot backend and a React front end. Implements role-based authentication (trainers & trainees), secure session management, PostgreSQL relational modeling, RESTful CRUD endpoints, and a dynamic dashboard with charts and tables to visualize exercise progress.',
     cover: track,
-    demoUrl: 'https://github.com/Funtasti',
+    demoUrl: 'https://track-your-health-react.vercel.app',
     repoUrl: 'https://github.com/Funtasti',
     tech: ['React', 'TypeScript', 'Tailwind CSS', 'Spring Boot', 'Java', 'PostgreSQL', 'JWT'],
     stats: [
