@@ -39,8 +39,8 @@ export default function Home() {
     }
   }
   return (
-    <section id="home" className="min-h-[calc(100vh-70px)] py-16 md:py-24 bg-[#0b0b0b]  relative">
-      <div className="max-w-[1200px] mx-auto px-5">
+    <section id="home" className="min-h-[calc(100vh-70px)] mt-[70px] bg-[#0b0b0b] relative">
+      <div className="max-w-[1200px] mx-auto px-5 pt-0 lg:pt-32 h-full flex items-center">
         <motion.div
           ref={ref as React.RefObject<HTMLDivElement>}
           className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center h-full"
@@ -50,7 +50,7 @@ export default function Home() {
         >
           <motion.div variants={itemVariants} className="flex flex-col">
             <h2 className="text-4xl md:text-5xl font-bold text-purple-500 text-shadow-xs text-shadow-neutral-200 mb-4 md:mb-6 leading-tight">
-              Frontend Developer
+              Full Stack Developer
             </h2>
             <p className="text-lg text-white/80 mb-6 md:mb-8 opacity-90 leading-relaxed">
               Entry-level developer with hands-on experience in building responsive, maintainable, user‑centric applications—strong in problem‑solving, communication, collaboration, and continuous learning.

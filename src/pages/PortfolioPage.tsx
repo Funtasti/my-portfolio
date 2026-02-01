@@ -77,7 +77,7 @@ export default function PortfolioPage() {
   const closeDetail = () => setDetail(null)
 
   return (
-    <section id="portfolio" className="min-h-screen py-14 md:py-16 bg-gradient-to-br from-[rgba(24,24,24,0.8)] to-[rgba(11,11,11,0.92)]">
+    <section id="portfolio" className="min-h-screen py-14 md:py-8 bg-gradient-to-br from-[rgba(24,24,24,0.8)] to-[rgba(11,11,11,0.92)]">
       <div className="max-w-[1200px] mx-auto px-5">
         <div className="text-center mb-8 md:mb-10">
           <h1 className="text-4xl md:text-5xl font-extrabold text-gradient-white tracking-wide">
