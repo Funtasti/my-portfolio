@@ -28,10 +28,10 @@ export default function Navbar() {
   return (
     <motion.nav
       className={clsx(
-        "fixed top-0 w-full z-50 transition-all duration-300 backdrop-blur-custom",
+        "fixed top-0 w-full z-50 transition-all duration-300 backdrop-blur-custom border-b",
         isScrolled
-          ? "bg-[rgba(11,11,11,0.90)] shadow-[0_2px_20px_rgba(124,58,237,0.2)]"
-          : "bg-[rgba(11,11,11,0.90)]"
+          ? "bg-[rgba(11,11,11,0.90)] shadow-[0_2px_20px_rgba(124,58,237,0.2)] border-transparent"
+          : "bg-[rgba(11,11,11,0.90)] border-[rgba(255,255,255,0.06)]"
       )}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
