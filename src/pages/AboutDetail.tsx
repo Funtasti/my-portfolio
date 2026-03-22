@@ -4,7 +4,7 @@ import { Code, Award, Calendar, type LucideIcon } from 'lucide-react' //Trophy,
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import { smoothScrollTo } from '../utils/smoothScroll'
 import StatsCard from '../components/StatusCard'
-import resumePdf from '../assets/Sumit_kumar_naik_resume.pdf'
+import resumePdf from '../assets/SumitKumarNaik_Resume.pdf'
 
 interface Stat {
   icon: LucideIcon
