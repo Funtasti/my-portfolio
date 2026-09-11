@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import clsx from "clsx";
 import { useScrollNavigation } from "../hooks/useScrollNavigation";
 import { smoothScrollTo } from "../utils/smoothScroll";
@@ -9,16 +9,16 @@ interface NavItem {
   label: string;
 }
 
-export default function Navbar() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
-  const { activeSection, isScrolled } = useScrollNavigation();
-
-  const navItems: NavItem[] = [
+const navItems: NavItem[] = [
     { id: "home", label: "Home" },
     { id: "about", label: "About" },
     { id: "portfolio", label: "Portfolio" },
     { id: "contact", label: "Contact" },
   ];
+
+export default function Navbar() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
+  const { activeSection, isScrolled } = useScrollNavigation();
 
   const handleNavClick = (id: string): void => {
     smoothScrollTo(id);
@@ -102,33 +102,35 @@ export default function Navbar() {
         </button>
 
         {/* Mobile Menu */}
-        <motion.div
-          className={clsx(
-            "fixed inset-x-0 top-[70px] bg-[rgba(11,11,11,0.95)] backdrop-blur-custom md:hidden overflow-y-auto",
-            isMobileMenuOpen ? "flex" : "hidden"
+        <AnimatePresence>
+          {isMobileMenuOpen && (
+            <motion.div
+              className="fixed inset-x-0 top-[70px] bg-[rgba(11,11,11,0.95)] backdrop-blur-custom md:hidden overflow-y-auto"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="flex flex-col items-center py-8 gap-4 w-full">
+                {navItems.map((item) => (
+                  <motion.button
+                    key={item.id}
+                    onClick={() => handleNavClick(item.id)}
+                    className={clsx(
+                      "text-white/90 font-medium transition-all duration-300 hover:text-purple-500",
+                      activeSection === item.id && "text-purple-500"
+                    )}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    type="button"
+                  >
+                    {item.label}
+                  </motion.button>
+                ))}
+              </div>
+            </motion.div>
           )}
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: isMobileMenuOpen ? 1 : 0, y: isMobileMenuOpen ? 0 : -20 }}
-          transition={{ duration: 0.3 }}
-        >
-          <div className="flex flex-col items-center py-8 gap-4 w-full">
-            {navItems.map((item) => (
-              <motion.button
-                key={item.id}
-                onClick={() => handleNavClick(item.id)}
-                className={clsx(
-                  "text-white/90 font-medium transition-all duration-300 hover:text-purple-500",
-                  activeSection === item.id && "text-purple-500"
-                )}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                type="button"
-              >
-                {item.label}
-              </motion.button>
-            ))}
-          </div>
-        </motion.div>
+        </AnimatePresence>
       </div>
     </motion.nav>
   );

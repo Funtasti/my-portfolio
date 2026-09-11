@@ -12,30 +12,25 @@ export function useScrollNavigation(): UseScrollNavigationResult {
   useEffect(() => {
     if (typeof window === "undefined" || typeof document === "undefined") return;
 
-    const sectionIds: { id: string }[] = [
-      { id: "home" },
-      { id: "about" },
-      { id: "portfolio" },
-      { id: "contact" }
-    ];
+    const sectionIds = ["home", "about", "portfolio", "contact" ];
 
     const handleScroll = (): void => {
       const scrollY = window.scrollY ?? window.pageYOffset ?? 0;
 
       setIsScrolled(scrollY > 100);
 
-      const scrollPos = scrollY + 100;
+      const viewportCenter = scrollY + window.innerHeight / 2;
 
-      for (const s of sectionIds) {
-        const el = document.getElementById(s.id);
+      for (const id of sectionIds) {
+        const el = document.getElementById(id);
         if (!el) continue;
 
         const rect = el.getBoundingClientRect();
-        const top = window.scrollY + rect.top;
-        const height = rect.height;
+        const top = scrollY + rect.top;
+        const bottom = top + rect.height;
 
-        if (scrollPos >= top && scrollPos < top + height) {
-          setActiveSection((prev) => (prev === s.id ? prev : s.id));
+        if (viewportCenter >= top && viewportCenter < bottom) {
+          setActiveSection((prev) => (prev === id ? prev : id));
           break;
         }
       }

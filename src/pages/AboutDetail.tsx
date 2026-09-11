@@ -3,7 +3,7 @@ import { motion, type Variants } from 'framer-motion'
 import { Code, Award, Calendar, type LucideIcon } from 'lucide-react' //Trophy,
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import { smoothScrollTo } from '../utils/smoothScroll'
-import StatsCard from '../components/StatusCard'
+import StatusCard from '../components/StatusCard'
 import resumePdf from '../assets/SumitKumarNaik_Resume.pdf'
 
 interface Stat {
@@ -46,8 +46,8 @@ export default function AboutDetail() {
   }
 
   return (
-    <section id="about" className="min-h-[calc(100vh-70px)] py-16 md:py-20 bg-gradient-to-br from-[rgba(24,24,24,0.8)] to-[rgba(11,11,11,0.9)]">
-      <div className="max-w-[1200px] mx-auto px-5">
+    <section id="about" className="min-h-[calc(100vh-70px)] py-16 md:py-8 bg-gradient-to-br from-[rgba(24,24,24,0.8)] to-[rgba(11,11,11,0.9)]">
+      <div className="mx-auto px-5 md:px-10 lg:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
           <motion.div
             ref={contentRef as React.Ref<HTMLDivElement>}
@@ -84,7 +84,7 @@ export default function AboutDetail() {
                 </motion.a>
                 <motion.button
                   onClick={() => smoothScrollTo('portfolio')}
-                  className="text-purple-500 font-semibold hover:text-blue-500 transition-colors"
+                  className="text-purple-500 font-semibold hover:text-blue-500 transition-colors cursor-pointer"
                   whileHover={{ x: 5 }}
                 >
                   View Projects →
@@ -115,8 +115,8 @@ export default function AboutDetail() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {stats.map((stat, index) => (
-            <StatsCard
-              key={index}
+            <StatusCard
+              key={stat.label}
               icon={stat.icon}
               count={stat.count}
               label={stat.label}

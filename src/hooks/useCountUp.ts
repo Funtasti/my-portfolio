@@ -18,16 +18,15 @@ export function useCountUp(
     }
     startRef.current = null;
 
-    const startValue = 0;
-    const finalTarget = Number(target) || 0;
+    const finalTarget = target;
 
     const animate = (time: number) => {
       if (startRef.current === null) startRef.current = time;
       const elapsed = time - startRef.current;
       const progress = Math.min(elapsed / Math.max(duration, 1), 1);
 
-      const eased = 1 - Math.pow(1 - progress, 4);
-      const current = Math.floor(startValue + (finalTarget - startValue) * eased);
+      const eased = progress;
+      const current = Math.floor(finalTarget * eased);
 
       setCount(current);
 

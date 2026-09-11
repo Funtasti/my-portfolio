@@ -6,7 +6,7 @@ export default function Welcome() {
     const [percent, setPercent] = useState(0);
 
     useEffect(() => {
-        const DURATION = 900;
+        const DURATION = 1900;
 
         if (reduce) {
             setPercent(100);
@@ -56,7 +56,7 @@ export default function Welcome() {
                         >
                             <div
                                 className="absolute left-0 top-0 bottom-0 bg-gradient-to-r from-pink-500 via-purple-600 to-cyan-400"
-                                style={{ width: `${percent}%`, transition: reduce ? "none" : "width 120ms linear" }}
+                                style={{ width: `${percent}%` }}
                             />
                         </div>
 

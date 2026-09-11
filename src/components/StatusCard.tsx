@@ -12,8 +12,9 @@ interface StatsCardProps {
 }
 
 export default function StatsCard({ icon: Icon, count, label, index } : StatsCardProps)  {
-  const [ref, isVisible] = useScrollAnimation(0.3)
-  const animatedCount = useCountUp(count, 2000, isVisible)
+  const [ref, isVisible] = useScrollAnimation(0.3);
+  const animatedCount = useCountUp(count, 1000, isVisible);
+
   return (
     <motion.div
       ref={ref as React.Ref<HTMLDivElement>}
@@ -27,15 +28,9 @@ export default function StatsCard({ icon: Icon, count, label, index } : StatsCar
         <Icon size={40} />
       </div>
       
-      <motion.h3 
-        className="text-3xl md:text-5xl font-bold text-gradient mb-2"
-        key={animatedCount}
-        initial={{ scale: 1.2 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 0.3 }}
-      >
+      <h3 className="text-3xl md:text-5xl font-bold text-gradient mb-2">
         {animatedCount}
-      </motion.h3>
+      </h3>
       
       <p className="text-white/80 text-sm font-semibold tracking-wider opacity-80">
         {label}

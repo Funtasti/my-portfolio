@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import Welcome from "./pages/Welcome";
 import MainPage from "./components/MainPage";
 
@@ -8,7 +8,7 @@ function App() {
   const [loaded, setLoaded] = useState<boolean>(false);
   const [minElapsed, setMinElapsed] = useState<boolean>(false);
 
-  const minMs = 1000;
+  const minMs = 2000;
 
   useEffect(() => {
     const onLoad = () => setLoaded(true);
@@ -24,9 +24,32 @@ function App() {
       window.removeEventListener("load", onLoad);
       clearTimeout(t);
     };
-  }, [minMs]);
+  }, []);
 
-  const showSplash = useMemo(() => !(loaded && minElapsed), [loaded, minElapsed]);
+  const showSplash = !(loaded && minElapsed);
+
+  useEffect(() => {
+    if(showSplash) return;
+
+    const hash = window.location.hash;
+
+    if(!hash) return;
+
+    const id = hash.substring(1);
+
+    const timer = setTimeout(() => {
+      const element = document.getElementById(id);
+
+      if(element) {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, [showSplash]);
 
   return (
     <>

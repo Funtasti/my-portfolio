@@ -46,9 +46,8 @@ export const projects: Project[] = [
     description:
       'Personal portfolio for Sumit Kumar Naik showcasing projects, certifications, and technical skills. Built with React + TypeScript on Vite, styled with Tailwind CSS, and animated using Framer Motion. Includes a responsive layout, dark theme, smooth section navigation, an accessible contact form, custom hooks for scroll-based interactions, and a tech-stack gallery for quick skill visibility.',
     cover: portfolio,
-    demoUrl: '#',
     repoUrl: 'https://github.com/Funtasti/my-portfolio',
-    tech: ['React','TypeScript', 'Vite', 'Tailwind CSS', 'Framer Motion', 'Lucide Icons'],
+    tech: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Framer Motion', 'Lucide Icons'],
     stats: [
       { label: 'Total Technology', value: '6' },
       { label: 'Features', value: '8' },

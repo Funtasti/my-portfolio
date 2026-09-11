@@ -15,9 +15,9 @@ export default function ProjectDetail({ project } : { project: Project }) {
         <p className="text-white/75 leading-relaxed mb-6">{project.description}</p>
 
         {/* Stats chips (like the screenshot row with numbers) */}
-        <div className="grid grid-cols-3 gap-3 mb-6">
-          {project.stats?.map((s, i) => (
-            <div key={i} className="rounded-xl bg-white/5 border border-white/10 p-3 text-center">
+        <div className="grid grid-cols-2 gap-3 mb-6">
+          {project.stats?.map((s) => (
+            <div key={s.label} className="rounded-xl bg-white/5 border border-white/10 p-3 text-center">
               <div className="text-white text-lg font-semibold">{s.value}</div>
               <div className="text-white/60 text-xs">{s.label}</div>
             </div>
@@ -40,8 +40,8 @@ export default function ProjectDetail({ project } : { project: Project }) {
         <div>
           <h4 className="text-white font-semibold mb-3">Technologies Used</h4>
           <div className="flex flex-wrap gap-2">
-            {project.tech.map((t, i) => (
-              <span key={i} className="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-white/70 text-xs">
+            {project.tech.map((t) => (
+              <span key={t} className="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-white/70 text-xs">
                 {t}
               </span>
             ))}
@@ -59,8 +59,8 @@ export default function ProjectDetail({ project } : { project: Project }) {
           <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
             <h4 className="text-white font-semibold mb-3">Key Features</h4>
             <ul className="space-y-2">
-              {project.features.map((f, i) => (
-                <li key={i} className="flex gap-2 text-white/75">
+              {project.features.map((f) => (
+                <li key={f} className="flex gap-2 text-white/75">
                   <CheckCircle2 className="w-4 h-4 text-purple-400 mt-0.5" />
                   <span>{f}</span>
                 </li>

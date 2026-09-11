@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion, type Variants } from 'framer-motion'
-import { Github, Linkedin, Instagram, type LucideIcon } from 'lucide-react'
+import { Github, Linkedin, type LucideIcon } from 'lucide-react'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import { smoothScrollTo } from '../utils/smoothScroll'
 
@@ -14,8 +14,7 @@ export default function Home() {
   const [ref, isVisible] = useScrollAnimation(0.2)
   const socialLinks: SocialLink[] = [
     { icon: Github, href: 'https://github.com/Funtasti', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://www.linkedin.com/in/sumit-kumar-naik', label: 'LinkedIn' },
-    { icon: Instagram, href: '#', label: 'Instagram' }
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/sumit-kumar-naik', label: 'LinkedIn' }
   ]
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -40,7 +39,7 @@ export default function Home() {
   }
   return (
     <section id="home" className="min-h-[calc(100vh-70px)] mt-[70px] bg-[#0b0b0b] relative">
-      <div className="max-w-[1200px] mx-auto px-5 pt-0 lg:pt-32 h-full flex items-center">
+      <div className="mx-auto px-5 md:px-10 lg:px-20 pt-2 lg:pt-24 h-full flex items-center">
         <motion.div
           ref={ref as React.RefObject<HTMLDivElement>}
           className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center h-full"
@@ -59,7 +58,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 mb-6 md:mb-8">
               <motion.button
                 onClick={() => smoothScrollTo('portfolio')}
-                className="btn-gradient text-white px-8 py-3 rounded-lg font-semibold"
+                className="btn-gradient text-white px-8 py-3 rounded-lg font-semibold cursor-pointer"
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -68,7 +67,7 @@ export default function Home() {
               
               <motion.button
                 onClick={() => smoothScrollTo('contact')}
-                className="bg-purple-500/10 text-purple-500 border-2 border-purple-500 px-8 py-3 rounded-lg font-semibold hover:bg-purple-500/20"
+                className="bg-purple-500/10 text-purple-500 border-2 border-purple-500 px-8 py-3 rounded-lg font-semibold hover:bg-purple-500/20 cursor-pointer"
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -77,9 +76,9 @@ export default function Home() {
             </div>
 
             <div className="flex gap-4">
-              {socialLinks.map((social, index) => (
+              {socialLinks.map((social) => (
                 <motion.a
-                  key={index}
+                  key={social.label}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
