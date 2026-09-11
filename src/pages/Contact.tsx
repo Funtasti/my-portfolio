@@ -18,7 +18,7 @@ interface FormData {
 }
 
 emailjs.init({
-  publicKey: import.meta.env.EMAILJS_PUBLIC_KEY,
+  publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
   blockHeadless: true,
   limitRate: {
     id: "contact-form",
@@ -61,8 +61,8 @@ export default function Contact() {
 
     try {
       await emailjs.send(
-        import.meta.env.EMAILJS_SERVICE_ID,
-        import.meta.env.EMAILJS_TEMPLATE_ID,
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
           name: formData.name,
           email: formData.email,
@@ -178,7 +178,7 @@ export default function Contact() {
             <div className="flex justify-center max-w-full overflow-hidden">
               <ReCAPTCHA
                 ref={captchaRef}
-                sitekey={import.meta.env.RECAPTCHA_SITE_KEY}
+                sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
                 onChange={(token) => setCaptchaToken(token)}
                 onExpired={() => setCaptchaToken(null)}
               />
